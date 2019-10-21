@@ -1,0 +1,46 @@
+#one {
+  .container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-areas:
+            "header"
+            "section"
+            "aside-1"
+            "aside-2"
+            "footer";
+
+    > * {
+      background: mediumseagreen;
+      font-size: 80px;
+    }
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  aside:first-of-type {
+    grid-area: aside-1;
+  }
+
+  section {
+    grid-area: section;
+  }
+
+  aside:last-of-type {
+    grid-area: aside-2;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+
+  @media (min-width: 700px) {
+    .container {
+      grid-template-areas:
+              "header header header"
+              "aside-1 section aside-2"
+              "footer footer footer";
+    }
+  }
+}
