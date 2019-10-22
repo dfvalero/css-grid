@@ -1,3 +1,4 @@
-const content = pages => pages.reduce((total, page) => total + `<li><a href="/${page}">${page}</a></li>`, '<ul>') + '</ul>';
+const generateItem = page => `<li><a href="/${page}">${page}</a></li>`;
+const generateList = pages => pages.reduce((total, current) => total + generateItem(current), '<ul>') + '</ul>';
 
-export default content;
+export default generateList;

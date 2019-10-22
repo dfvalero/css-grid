@@ -1,0 +1,19 @@
+#fifteen {
+  height: 100%;
+
+  .container {
+    display: grid;
+    grid-gap: 20px;
+    // Next line will be invalid in Firefox
+    grid: 3fr 14fr / auto-flow dense 4fr 2fr;
+    height: 100%;
+  }
+
+  .grid-item {
+    background-color: crimson;
+
+    &:nth-of-type(2) {
+      grid-row: span 3;
+    }
+  }
+}
